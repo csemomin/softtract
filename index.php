@@ -1,48 +1,3 @@
-<?php
-    require_once 'db.php'; 
-    date_default_timezone_set("Asia/Dhaka");
-    
-    function notvalidNumber($msisdn) {
-       $code = null;
-       if (strlen($msisdn) == 11) {
-           $code = substr($msisdn, 0, 3);
-       } elseif (strlen($msisdn) == 13) {
-           $code = substr($msisdn, 2, 3);
-       } elseif (strlen($msisdn) == 14) {
-           $code = substr($msisdn, 3, 3);
-       }elseif (strlen($msisdn) == 15) {
-           $code = substr($msisdn, 4, 3);
-       }
-
-       if($code != null && ($code == '014' || $code == '015' || $code == '016' || $code == '017' || $code == '018' || $code == '019')) {
-           return false;
-       } else {
-           return true;
-       }
-   }
-
-    if($_SERVER['REQUEST_METHOD'] == "POST"){
-        $contact_time = date('Y-m-d H:i:s');
-        
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $subject = $_POST['subject'];
-        $message = $_POST['message'];
-        
-       // $show = notvalidNumber($phone);
-        $sql = "INSERT INTO `contact_user`(`id`, `subject`, `message`, `name`, `email`, `phone`, `contact_time`, `response_time`) VALUES (null,'$subject','$message',,'$name','$email','$phone','$contact_time','')";
-    //   echo  
-        // exit;
-        
-        $stmt = $db->prepare($sql);
-    
-        $insert_value = $stmt->execute();
-        
-        // var_dump($insert_value);exit;
-    } 
-        
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -539,18 +494,9 @@
               </div>
       
               <div class="testimonial-item">
-                <img src="img/borat.jpeg" class="testimonial-img" alt="Borat Hossain">
-                <h3>Borat Hossain</h3>
-                <h4>Busines Analyst, Apsis Solutions Ltd.</h4>
-                <p>
-                  "Working with this company has been a game-changer for our business. Sales increased dramatically after implementing their solutions."
-                </p>
-              </div>
-      
-              <div class="testimonial-item">
                 <img src="img/tamim.jpeg" class="testimonial-img" alt="Gazi Md. Shahnewaz">
                 <h3>Gazi Md. Shahnewaz</h3>
-                <h4>Software Engineer, Apsis Solutions Ltd.</h4>
+                <h4>Freelancer, Web Developer</h4>
                 <p>
                   "The attention to detail and customer support we received was second to none. Our projects were delivered on time and exceeded expectations."
                 </p>
@@ -573,6 +519,14 @@
                   "Their innovative approach and expertise helped us overcome significant challenges and scale our business. I highly recommend their services."
                 </p>
               </div>
+              <!-- <div class="testimonial-item">
+                <img src="img/borat.jpeg" class="testimonial-img" alt="Borat Hossain">
+                <h3>Borat Hossain</h3>
+                <h4>Busines Analyst, Apsis Solutions Ltd.</h4>
+                <p>
+                  "Working with this company has been a game-changer for our business. Sales increased dramatically after implementing their solutions."
+                </p>
+              </div> -->
 
             </div>
 
