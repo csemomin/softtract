@@ -1,5 +1,5 @@
 <?php
-    require_once '../db.php'; 
+    require_once '../../db.php'; 
     date_default_timezone_set("Asia/Dhaka");
     
     function notvalidNumber($msisdn) {
@@ -20,27 +20,20 @@
            return true;
        }
    }
-
+ 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
-        $contact_time = date('Y-m-d H:i:s');
-        
+        $contact_time = date('Y-m-d H:i:s');  
         $name = $_POST['name'];
         $email = $_POST['email'];
         // $phone = $_POST['phone'];
         $subject = $_POST['subject'];
         $message = $_POST['message'];
-        
-       // $show = notvalidNumber($phone);
-        $sql = "INSERT INTO `contact_user`(`id`, `subject`, `message`, `name`, `email`, `phone`, `contact_time`, `response_time`) VALUES (null,'$subject','$message',,'$name','$email','','$contact_time','')";
-    //   echo  
-        // exit;
+         
+        $sql = "INSERT INTO `contact_user`(`id`, `subject`, `message`, `name`, `email`, `phone`, `contact_time`, `response_time`) VALUES (null,'$subject','$message','$name','$email','','$contact_time','')"; 
         
         $stmt = $db->prepare($sql);
     
-        $insert_value = $stmt->execute();
-        
-        echo $insert_value;
-        // var_dump($insert_value);exit;
+        $insert_value = $stmt->execute(); 
     } 
         
 ?>

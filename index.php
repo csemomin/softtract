@@ -848,7 +848,7 @@
   <script src="allfiles/lib/isotope/isotope.pkgd.min.js"></script>
   <script src="allfiles/lib/lightbox/js/lightbox.min.js"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="allfiles/contactform/img/contactform.js"></script>
+  <script src="allfiles/contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="allfiles/js/main.js"></script>
