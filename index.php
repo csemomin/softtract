@@ -8,24 +8,24 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="allfiles/img/favicon.png" rel="icon">
+  <link href="allfiles/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="allfiles/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="allfiles/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="allfiles/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="allfiles/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="allfiles/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="allfiles/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet"> 
+  <link href="allfiles/css/style.css" rel="stylesheet"> 
 </head>
 
 <body>
@@ -39,10 +39,10 @@
       <div class="logo float-left">
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
-        <!-- <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+        <!-- <a href="#intro" class="scrollto"><img src="allfiles/img/logo.png" alt="" class="img-fluid"></a> -->
          <!-- Softtract -->
  
-          <img src="img/logo.svg" class="img-fluid" style="width: 170px; object-fit: cover; height: 100%;" />
+          <img src="allfiles/img/logo.svg" class="img-fluid" style="width: 170px; object-fit: cover; height: 100%;" />
         </div>
 
       <nav class="main-nav float-right d-none d-lg-block">
@@ -83,7 +83,7 @@
     <div class="container">
 
       <div class="intro-img">
-        <img src="img/intro-img.svg" alt="" class="img-fluid">
+        <img src="allfiles/img/intro-img.svg" alt="" class="img-fluid">
       </div>
 
       <div class="intro-info">
@@ -138,13 +138,13 @@
           </div>
     
           <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-            <img src="img/about-img.svg" class="img-fluid" alt="About Softtract">
+            <img src="allfiles/img/about-img.svg" class="img-fluid" alt="About Softtract">
           </div>
         </div>
     
         <div class="row about-extra">
           <div class="col-lg-6 wow fadeInUp">
-            <img src="img/about-extra-1.svg" class="img-fluid" alt="Our Mission">
+            <img src="allfiles/img/about-extra-1.svg" class="img-fluid" alt="Our Mission">
           </div>
           <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
             <h4>Our Mission</h4>
@@ -156,7 +156,7 @@
     
         <div class="row about-extra">
           <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
-            <img src="img/about-extra-2.svg" class="img-fluid" alt="Why Choose Us">
+            <img src="allfiles/img/about-extra-2.svg" class="img-fluid" alt="Why Choose Us">
           </div>
     
           <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
@@ -335,47 +335,78 @@
           </div>
         </div> -->
 
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/bpc/dashboard.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a onclick="return false;">BPC</a></h4>
-                <p>
-                  <!-- Discover BPC, our innovative software to transform your ideas into success. Using our AI, create accurate financial forecasts: balance sheets, income statements, and more. Our KPIs and analyzes guide you towards profitability. BPC also provides automated legal assistance: generate employment contracts, partner agreements, and other essential documents. Make starting your business easier with our technology. -->
-                </p>
-                <div>
-                  <a href="img/portfolio/bpc/dashboard.png" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="https://staging.businessplancollaboratif.com" target="_blank" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+        <div class="row">
+          <div class="col-lg-8 col-md-8">
+            <div class="row portfolio-container">  
+              <div class="col-lg-6 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                  <img src="allfiles/img/portfolio/bpc/dashboard.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4><a onclick="return false;">BPC</a></h4>
+                    <p>
+                      <!-- Discover BPC, our innovative software to transform your ideas into success. Using our AI, create accurate financial forecasts: balance sheets, income statements, and more. Our KPIs and analyzes guide you towards profitability. BPC also provides automated legal assistance: generate employment contracts, partner agreements, and other essential documents. Make starting your business easier with our technology. -->
+                    </p>
+                    <div>
+                      <a href="allfiles/img/portfolio/bpc/dashboard.png" data-lightbox="portfolio" data-title="BPC" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                      <a href="https://staging.businessplancollaboratif.com" target="_blank" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="col-lg-6 col-md-6 portfolio-item filter-card">
+                <div class="portfolio-wrap">
+                  <img src="allfiles/img/portfolio/solor/1.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4><a onclick="return false;">Solor</a></h4>
+                    <!-- <p>Card</p> -->
+                    <div>
+                      <a href="allfiles/img/portfolio/solor/1.png" class="link-preview" data-lightbox="portfolio" data-title="Solor" title="Preview"><i class="ion ion-eye"></i></a>
+                      <a href="https://www.bcsolarpower.com/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="col-lg-6 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+                <div class="portfolio-wrap">
+                  <img src="allfiles/img/portfolio/vector-power/1.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4><a onclick="return false;">Vector Power</a></h4>
+                    <!-- <p>Card</p> -->
+                    <div>
+                      <a href="allfiles/img/portfolio/vector-power/1.png" class="link-preview" data-lightbox="portfolio" data-title="Vector Power" title="Preview"><i class="ion ion-eye"></i></a>
+                      <a href="https://www.vectorpowerbd.com/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+                <div class="portfolio-wrap">
+                  <img src="allfiles/img/portfolio/bpc-ai/1.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4><a onclick="return false;">BPC.ai</a></h4>
+                    <!-- <p>Web</p> -->
+                    <div>
+                      <a href="allfiles/img/portfolio/bpc-ai/1.png" class="link-preview" data-lightbox="portfolio" data-title="BPC.ai" title="Preview"><i class="ion ion-eye"></i></a>
+                      <a href="https://bpc-ai.com/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/bpc-ai/1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a onclick="return false;">BPC.ai</a></h4>
-                <!-- <p>Web</p> -->
-                <div>
-                  <a href="img/portfolio/bpc-ai/1.png" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="https://bpc-ai.com/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/coaching/9.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a onclick="return false;">Coaching Management</a></h4>
-                <!-- <p>App</p> -->
-                <div>
-                  <a href="img/portfolio/coaching/9.png" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a onclick="return false;" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+          <div class="col-lg-4 col-md-4">
+            <div class="row">    
+              <div class="col-lg-12 col-md-12 portfolio-item filter-app" data-wow-delay="0.2s">
+                <div class="portfolio-wrap">
+                  <img src="allfiles/img/portfolio/coaching/9.png" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4><a onclick="return false;">Coaching Management</a></h4>
+                    <!-- <p>App</p> -->
+                    <div>
+                      <a href="allfiles/img/portfolio/coaching/9.png" class="link-preview" data-lightbox="portfolio" data-title="Coaching Management" title="Preview"><i class="ion ion-eye"></i></a>
+                      <a onclick="return false;" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -383,12 +414,12 @@
 
           <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/card2.jpg" class="img-fluid" alt="">
+              <img src="allfiles/img/portfolio/card2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a onclick="return false;">Card 2</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="allfiles/img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -397,12 +428,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/web2.jpg" class="img-fluid" alt="">
+              <img src="allfiles/img/portfolio/web2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a onclick="return false;">Web 2</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="allfiles/img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -411,53 +442,26 @@
 
           <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/app3.jpg" class="img-fluid" alt="">
+              <img src="allfiles/img/portfolio/app3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a onclick="return false;">Office</a></h4>
                 <div>
-                  <a href="img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="allfiles/img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
             </div>
           </div> -->
   
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/vector-power/1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a onclick="return false;">Vector Power</a></h4>
-                <!-- <p>Card</p> -->
-                <div>
-                  <a href="img/portfolio/vector-power/1.png" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="https://www.vectorpowerbd.com/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/solor/1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a onclick="return false;">Solor</a></h4>
-                <!-- <p>Card</p> -->
-                <div>
-                  <a href="img/portfolio/solor/1.png" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="https://www.bcsolarpower.com/" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
+              <img src="allfiles/img/portfolio/web1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a onclick="return false;">Web 1</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="allfiles/img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -485,7 +489,7 @@
             <div class="owl-carousel testimonials-carousel wow fadeInUp">
       
               <div class="testimonial-item">
-                <img src="img/bi.jpeg" class="testimonial-img" alt="Bi Diyoro Thierry GOORE">
+                <img src="allfiles/img/bi.jpeg" class="testimonial-img" alt="Bi Diyoro Thierry GOORE">
                 <h3>Bi Diyoro Thierry GOORE</h3>
                 <h4>CEO at f.AI</h4>
                 <p>
@@ -494,7 +498,7 @@
               </div>
       
               <div class="testimonial-item">
-                <img src="img/tamim.jpeg" class="testimonial-img" alt="Gazi Md. Shahnewaz">
+                <img src="allfiles/img/tamim.jpeg" class="testimonial-img" alt="Gazi Md. Shahnewaz">
                 <h3>Gazi Md. Shahnewaz</h3>
                 <h4>Freelancer, Web Developer</h4>
                 <p>
@@ -503,7 +507,7 @@
               </div>
       
               <div class="testimonial-item">
-                <img src="img/testimonial-4.jpg" class="testimonial-img" alt="Emily Davis">
+                <img src="allfiles/img/testimonial-4.jpg" class="testimonial-img" alt="Emily Davis">
                 <h3>Emily Davis</h3>
                 <h4>Freelancer, Web Developer</h4>
                 <p>
@@ -512,7 +516,7 @@
               </div>
       
               <div class="testimonial-item">
-                <img src="img/testimonial-5.jpg" class="testimonial-img" alt="Michael Lee">
+                <img src="allfiles/img/testimonial-5.jpg" class="testimonial-img" alt="Michael Lee">
                 <h3>Michael Lee</h3>
                 <h4>Entrepreneur, Startup Founder</h4>
                 <p>
@@ -520,7 +524,7 @@
                 </p>
               </div>
               <!-- <div class="testimonial-item">
-                <img src="img/borat.jpeg" class="testimonial-img" alt="Borat Hossain">
+                <img src="allfiles/img/borat.jpeg" class="testimonial-img" alt="Borat Hossain">
                 <h3>Borat Hossain</h3>
                 <h4>Busines Analyst, Apsis Solutions Ltd.</h4>
                 <p>
@@ -553,7 +557,7 @@
           <div class="col-lg-3 col-md-6"></div>
           <div class="col-lg-3 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src="img/axel.jpeg" class="img-fluid" alt="">
+              <img src="allfiles/img/axel.jpeg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Joris Axel DA MATHA</h4>
@@ -571,7 +575,7 @@
         <!-- 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member">
-              <img src="img/borat.jpg" class="img-fluid" alt="">
+              <img src="allfiles/img/borat.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Borat Hossain</h4>
@@ -586,7 +590,7 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="img/gazi.jpeg" class="img-fluid" alt="">
+              <img src="allfiles/img/gazi.jpeg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Gazi Md. Shahnewaz</h4>
@@ -601,7 +605,7 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="img/momin.jpeg" class="img-fluid" alt="">
+              <img src="allfiles/img/momin.jpeg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Abdul Momin Ali</h4>
@@ -638,49 +642,49 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo"> 
-              <img src="img/clients/c-1.png" class="img-fluid" alt="">
+              <img src="allfiles/img/clients/c-1.png" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="img/clients/logo.png.webp" class="img-fluid" alt="">
+              <img src="allfiles/img/clients/logo.png.webp" class="img-fluid" alt="">
             </div>
           </div>
         
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="img/clients/client-3.png" class="img-fluid" alt="">
+              <img src="allfiles/img/clients/client-3.png" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="img/clients/client-4.png" class="img-fluid" alt="">
+              <img src="allfiles/img/clients/client-4.png" class="img-fluid" alt="">
             </div>
           </div>
 <!--           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="img/clients/client-5.png" class="img-fluid" alt="">
+              <img src="allfiles/img/clients/client-5.png" class="img-fluid" alt="">
             </div>
           </div>
         
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="img/clients/client-6.png" class="img-fluid" alt="">
+              <img src="allfiles/img/clients/client-6.png" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="img/clients/client-7.png" class="img-fluid" alt="">
+              <img src="allfiles/img/clients/client-7.png" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="img/clients/client-8.png" class="img-fluid" alt="">
+              <img src="allfiles/img/clients/client-8.png" class="img-fluid" alt="">
             </div>
           </div> -->
 
@@ -832,22 +836,22 @@
   <!-- <div id="preloader"></div> -->
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/mobile-nav/mobile-nav.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="allfiles/lib/jquery/jquery.min.js"></script>
+  <script src="allfiles/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="allfiles/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="allfiles/lib/easing/easing.min.js"></script>
+  <script src="allfiles/lib/mobile-nav/mobile-nav.js"></script>
+  <script src="allfiles/lib/wow/wow.min.js"></script>
+  <script src="allfiles/lib/waypoints/waypoints.min.js"></script>
+  <script src="allfiles/lib/counterup/counterup.min.js"></script>
+  <script src="allfiles/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="allfiles/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="allfiles/lib/lightbox/js/lightbox.min.js"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="allfiles/contactform/img/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="allfiles/js/main.js"></script>
 
 </body>
 </html>
