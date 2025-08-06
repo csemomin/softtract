@@ -6,6 +6,11 @@ import Image from 'next/image'
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileNavActive, setIsMobileNavActive] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +20,21 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Manage body class for mobile navigation
+  useEffect(() => {
+    if (!isClient) return
+
+    if (isMobileNavActive) {
+      document.body.classList.add('mobile-nav-active')
+    } else {
+      document.body.classList.remove('mobile-nav-active')
+    }
+
+    return () => {
+      document.body.classList.remove('mobile-nav-active')
+    }
+  }, [isMobileNavActive, isClient])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -32,6 +52,14 @@ export default function Header() {
     if (isMobileNavActive) {
       setIsMobileNavActive(false)
     }
+  }
+
+  const toggleMobileNav = () => {
+    setIsMobileNavActive(!isMobileNavActive)
+  }
+
+  const closeMobileNav = () => {
+    setIsMobileNavActive(false)
   }
 
   return (
@@ -67,40 +95,39 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Mobile Navigation */}
-        <div className="mobile-nav d-lg-none">
-          <button 
-            className="mobile-nav-toggle"
-            onClick={() => setIsMobileNavActive(!isMobileNavActive)}
-          >
+        {/* Mobile Navigation Toggle */}
+        <div className="mobile-nav-toggle d-lg-none">
+          <button onClick={toggleMobileNav}>
             <i className={`fa ${isMobileNavActive ? 'fa-times' : 'fa-bars'}`}></i>
           </button>
         </div>
-
-        {isMobileNavActive && (
-          <div className="mobile-nav-overly" onClick={() => setIsMobileNavActive(false)}></div>
-        )}
-
-        <nav className={`mobile-nav ${isMobileNavActive ? 'active' : ''}`}>
-          <ul>
-            <li className="active">
-              <button onClick={() => scrollToSection('intro')}>Home</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('about')}>About Us</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('services')}>Services</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('portfolio')}>Portfolio</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('contact')}>Contact Us</button>
-            </li>
-          </ul>
-        </nav>
       </div>
+
+      {/* Mobile Navigation Overlay */}
+      {isClient && isMobileNavActive && (
+        <div className="mobile-nav-overly active" onClick={closeMobileNav}></div>
+      )}
+
+      {/* Mobile Navigation Menu */}
+      <nav className={`mobile-nav ${isClient && isMobileNavActive ? 'active' : ''}`}>
+        <ul>
+          <li className="active">
+            <button onClick={() => scrollToSection('intro')}>Home</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection('about')}>About Us</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection('services')}>Services</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection('portfolio')}>Portfolio</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection('contact')}>Contact Us</button>
+          </li>
+        </ul>
+      </nav>
     </header>
   )
 } 
