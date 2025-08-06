@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import the original CSS file */
+@import url('/allfiles/css/style.css'); 
