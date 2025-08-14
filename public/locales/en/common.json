@@ -1,0 +1,119 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact Us"
+  },
+  "intro": {
+    "title": "Welcome to Softtract",
+    "subtitle": "Your Technology Partner for Digital Success",
+    "description": "We specialize in creating innovative software solutions that drive business growth and digital transformation.",
+    "cta": "Get Started"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Empowering Businesses Through Technology",
+    "description": "Softtract is a leading technology company dedicated to helping businesses thrive in the digital age. With years of experience and a passionate team of experts, we deliver cutting-edge solutions that transform ideas into reality.",
+    "mission": "Our Mission",
+    "missionText": "To provide innovative technology solutions that empower businesses to achieve their full potential in the digital landscape.",
+    "vision": "Our Vision",
+    "visionText": "To be the trusted technology partner for businesses worldwide, driving digital transformation and sustainable growth."
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer a comprehensive range of technology solutions to help your business thrive in today's competitive landscape.",
+    "websiteDevelopment": {
+      "title": "Website Development",
+      "description": "Custom, responsive websites built with modern technologies to enhance your digital presence and drive business growth."
+    },
+    "softwareDevelopment": {
+      "title": "Software Development",
+      "description": "End-to-end software solutions tailored to your business requirements, from web applications to enterprise systems."
+    },
+    "erpSolutions": {
+      "title": "Custom ERP Solutions",
+      "description": "Integrated ERP systems designed to streamline operations, improve efficiency, and provide real-time business insights."
+    },
+    "crmSolutions": {
+      "title": "CRM Solutions",
+      "description": "Comprehensive customer relationship management systems to optimize sales processes and enhance customer engagement."
+    },
+    "aiIntegration": {
+      "title": "AI Integration",
+      "description": "Intelligent automation solutions including chatbots, data analytics, and AI-powered business process optimization."
+    },
+    "cloudServices": {
+      "title": "Cloud Services",
+      "description": "Scalable cloud infrastructure solutions with AWS expertise, ensuring security, performance, and cost optimization."
+    },
+    "cta": {
+      "title": "Ready to Transform Your Business?",
+      "subtitle": "Let's discuss how our services can help you achieve your goals",
+      "button": "Get Started Today"
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose Us?",
+    "subtitle": "At Softtract, we bring innovation, expertise, and commitment to every project, ensuring your business thrives in the digital era.",
+    "features": {
+      "expertise": {
+        "title": "Expertise You Can Trust",
+        "description": "With years of experience in ERP, CRM, and cutting-edge technologies, we deliver solutions that are tailored, reliable, and scalable."
+      },
+      "customerCentric": {
+        "title": "Customer-Centric Approach",
+        "description": "We prioritize understanding your unique needs, providing personalized solutions that enhance efficiency and elevate customer experiences."
+      },
+      "innovation": {
+        "title": "Innovation at the Core",
+        "description": "Our focus on the latest technologies, including cloud computing and AI, ensures that your business stays ahead of the competition."
+      }
+    },
+    "counters": {
+      "satisfiedClients": "Satisfied Clients",
+      "successfulProjects": "Successful Projects",
+      "hoursOfSupport": "Hours of Support",
+      "dedicatedTeam": "Dedicated Team Members"
+    }
+  },
+  "clients": {
+    "title": "Our Clients",
+    "subtitle": "We proudly partner with a diverse range of businesses, delivering tailored solutions that drive success and innovation."
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Explore our latest projects and success stories",
+    "viewProject": "View Project"
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Meet the experts behind our success",
+    "position": "Position"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Testimonials from satisfied customers"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "name": "Name",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "getInTouch": "Get In Touch",
+    "contactInfo": "Contact Information"
+  },
+  "footer": {
+    "description": "Softtract is your trusted technology partner for digital transformation and business growth.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "copyright": "© 2024 Softtract. All rights reserved."
+  }
+}

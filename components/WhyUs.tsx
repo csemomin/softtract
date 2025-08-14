@@ -3,8 +3,10 @@
 import { useEffect, useState } from 'react'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function WhyUs() {
+  const { t } = useTranslations()
   const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
@@ -31,18 +33,18 @@ export default function WhyUs() {
   const features = [
     {
       icon: 'fa fa-diamond',
-      title: 'Expertise You Can Trust',
-      description: 'With years of experience in ERP, CRM, and cutting-edge technologies, we deliver solutions that are tailored, reliable, and scalable.'
+      titleKey: 'whyUs.features.expertise.title',
+      descriptionKey: 'whyUs.features.expertise.description'
     },
     {
       icon: 'fa fa-language',
-      title: 'Customer-Centric Approach',
-      description: 'We prioritize understanding your unique needs, providing personalized solutions that enhance efficiency and elevate customer experiences.'
+      titleKey: 'whyUs.features.customerCentric.title',
+      descriptionKey: 'whyUs.features.customerCentric.description'
     },
     {
       icon: 'fa fa-object-group',
-      title: 'Innovation at the Core',
-      description: 'Our focus on the latest technologies, including cloud computing and AI, ensures that your business stays ahead of the competition.'
+      titleKey: 'whyUs.features.innovation.title',
+      descriptionKey: 'whyUs.features.innovation.description'
     }
   ]
 
@@ -50,8 +52,8 @@ export default function WhyUs() {
     <section id="why-us" className="wow fadeIn">
       <div className="container">
         <header className="section-header">
-          <h3>Why Choose Us?</h3>
-          <p>At Softtract, we bring innovation, expertise, and commitment to every project, ensuring your business thrives in the digital era.</p>
+          <h3>{t('whyUs.title')}</h3>
+          <p>{t('whyUs.subtitle')}</p>
         </header>
 
         <div className="row row-eq-height justify-content-center">
@@ -60,8 +62,8 @@ export default function WhyUs() {
               <div className="card wow bounceInUp">
                 <i className={feature.icon}></i>
                 <div className="card-body">
-                  <h5 className="card-title">{feature.title}</h5>
-                  <p className="card-text">{feature.description}</p>
+                  <h5 className="card-title">{t(feature.titleKey)}</h5>
+                  <p className="card-text">{t(feature.descriptionKey)}</p>
                 </div>
               </div>
             </div>
@@ -73,25 +75,25 @@ export default function WhyUs() {
             <span>
               {inView && <CountUp end={counters.clients} duration={2} />}
             </span>
-            <p>Satisfied Clients</p>
+            <p>{t('whyUs.counters.satisfiedClients')}</p>
           </div>
           <div className="col-lg-3 col-6 text-center">
             <span>
               {inView && <CountUp end={counters.projects} duration={2} />}
             </span>
-            <p>Successful Projects</p>
+            <p>{t('whyUs.counters.successfulProjects')}</p>
           </div>
           <div className="col-lg-3 col-6 text-center">
             <span>
               {inView && <CountUp end={counters.hours} duration={2} />}
             </span>
-            <p>Hours of Support</p>
+            <p>{t('whyUs.counters.hoursOfSupport')}</p>
           </div>
           <div className="col-lg-3 col-6 text-center">
             <span>
               {inView && <CountUp end={counters.team} duration={2} />}
             </span>
-            <p>Dedicated Team Members</p>
+            <p>{t('whyUs.counters.dedicatedTeam')}</p>
           </div>
         </div>
       </div>

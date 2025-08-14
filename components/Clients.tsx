@@ -1,8 +1,11 @@
 'use client'
 
 import Image from 'next/image'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function Clients() {
+  const { t } = useTranslations()
+
   const clients = [
     '/allfiles/img/clients/c-1.png',
     '/allfiles/img/clients/logo.png.webp',
@@ -14,8 +17,8 @@ export default function Clients() {
     <section id="clients" className="section-bg">
       <div className="container">
         <div className="section-header">
-          <h3>Our Clients</h3>
-          <p>We proudly partner with a diverse range of businesses, delivering tailored solutions that drive success and innovation.</p>
+          <h3>{t('clients.title')}</h3>
+          <p>{t('clients.subtitle')}</p>
         </div>
 
         <div className="row no-gutters clients-wrap clearfix wow fadeInUp">

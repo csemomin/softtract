@@ -1,8 +1,11 @@
 'use client'
 
 import Image from 'next/image'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function Team() {
+  const { t } = useTranslations()
+
   const teamMembers = [
     {
       image: '/allfiles/img/axel.jpeg',
@@ -22,8 +25,8 @@ export default function Team() {
     <section id="team" style={{ display: 'none' }}>
       <div className="container">
         <div className="section-header">
-          <h3>Team</h3>
-          <p>Our expert team delivers innovative solutions, helping businesses thrive with cutting-edge technology and tailored services.</p>
+          <h3>{t('team.title')}</h3>
+          <p>{t('team.subtitle')}</p>
         </div>
 
         <div className="row">

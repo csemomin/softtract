@@ -2,8 +2,10 @@
 
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function Testimonials() {
+  const { t } = useTranslations()
   const carouselRef = useRef<HTMLDivElement>(null)
 
   const testimonials = [
@@ -84,7 +86,8 @@ export default function Testimonials() {
     <section id="testimonials" className="section-bg">
       <div className="container">
         <header className="section-header">
-          <h3>Testimonials</h3>
+          <h3>{t('testimonials.title')}</h3>
+          <p>{t('testimonials.subtitle')}</p>
         </header>
 
         <div className="row justify-content-center">

@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function Header() {
+  const { t, locale, changeLocale } = useTranslations()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileNavActive, setIsMobileNavActive] = useState(false)
   const [isClient, setIsClient] = useState(false)
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
-  const [currentLanguage, setCurrentLanguage] = useState('English')
 
   const languages = [
     { name: 'English', code: 'en', flag: '🇺🇸' },
@@ -99,11 +100,11 @@ export default function Header() {
   }
 
   const selectLanguage = (language: { name: string, code: string, flag: string }) => {
-    setCurrentLanguage(language.name)
+    changeLocale(language.code)
     setIsLanguageDropdownOpen(false)
-    // Here you can add logic to change the actual language
-    console.log(`Language changed to: ${language.name} (${language.code})`)
   }
+
+  const currentLanguage = languages.find(lang => lang.code === locale) || languages[0]
 
   return (
     <header id="header" className={`fixed-top ${isScrolled ? 'header-scrolled' : ''}`}>
@@ -121,19 +122,19 @@ export default function Header() {
         <nav className="main-nav float-right d-none d-lg-block">
           <ul>
             <li className="active">
-              <button onClick={() => scrollToSection('intro')}>Home</button>
+              <button onClick={() => scrollToSection('intro')}>{t('navigation.home')}</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection('about')}>About Us</button>
+              <button onClick={() => scrollToSection('about')}>{t('navigation.about')}</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection('services')}>Services</button>
+              <button onClick={() => scrollToSection('services')}>{t('navigation.services')}</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection('portfolio')}>Portfolio</button>
+              <button onClick={() => scrollToSection('portfolio')}>{t('navigation.portfolio')}</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection('contact')}>Contact Us</button>
+              <button onClick={() => scrollToSection('contact')}>{t('navigation.contact')}</button>
             </li>
             <li className="language-selector">
               <div className="relative">
@@ -141,9 +142,9 @@ export default function Header() {
                   onClick={toggleLanguageDropdown}
                   className="language-btn flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
                 >
-                  <FlagIcon countryCode={languages.find(lang => lang.name === currentLanguage)?.code || 'en'} />
+                  <FlagIcon countryCode={currentLanguage.code} />
                   <span className="text-sm font-medium text-gray-700">
-                    {currentLanguage}
+                    {currentLanguage.name}
                   </span>
                   <svg 
                     className={`w-4 h-4 transition-transform duration-200 ${isLanguageDropdownOpen ? 'rotate-180' : ''}`} 
@@ -158,16 +159,16 @@ export default function Header() {
                 {isLanguageDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
                     {languages.map((language) => (
-                                             <button
-                         key={language.code}
-                         onClick={() => selectLanguage(language)}
-                         className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-gray-50 transition-colors duration-200 ${
-                           currentLanguage === language.name ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
-                         }`}
-                       >
-                         <FlagIcon countryCode={language.code} />
-                         <span className="text-sm font-medium">{language.name}</span>
-                       </button>
+                      <button
+                        key={language.code}
+                        onClick={() => selectLanguage(language)}
+                        className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-gray-50 transition-colors duration-200 ${
+                          currentLanguage.code === language.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                        }`}
+                      >
+                        <FlagIcon countryCode={language.code} />
+                        <span className="text-sm font-medium">{language.name}</span>
+                      </button>
                     ))}
                   </div>
                 )}
@@ -193,19 +194,19 @@ export default function Header() {
       <nav className={`mobile-nav ${isClient && isMobileNavActive ? 'active' : ''}`}>
         <ul>
           <li className="active">
-            <button onClick={() => scrollToSection('intro')}>Home</button>
+            <button onClick={() => scrollToSection('intro')}>{t('navigation.home')}</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection('about')}>About Us</button>
+            <button onClick={() => scrollToSection('about')}>{t('navigation.about')}</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection('services')}>Services</button>
+            <button onClick={() => scrollToSection('services')}>{t('navigation.services')}</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection('portfolio')}>Portfolio</button>
+            <button onClick={() => scrollToSection('portfolio')}>{t('navigation.portfolio')}</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection('contact')}>Contact Us</button>
+            <button onClick={() => scrollToSection('contact')}>{t('navigation.contact')}</button>
           </li>
           <li className="mobile-language-section">
             <div className="mobile-language-header">
@@ -213,16 +214,16 @@ export default function Header() {
             </div>
             <div className="mobile-language-options">
               {languages.map((language) => (
-                                 <button
-                   key={language.code}
-                   onClick={() => selectLanguage(language)}
-                   className={`mobile-language-option flex items-center space-x-3 w-full px-4 py-3 text-left ${
-                     currentLanguage === language.name ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
-                   }`}
-                 >
-                   <FlagIcon countryCode={language.code} />
-                   <span className="text-sm font-medium">{language.name}</span>
-                 </button>
+                <button
+                  key={language.code}
+                  onClick={() => selectLanguage(language)}
+                  className={`mobile-language-option flex items-center space-x-3 w-full px-4 py-3 text-left ${
+                    currentLanguage.code === language.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                  }`}
+                >
+                  <FlagIcon countryCode={language.code} />
+                  <span className="text-sm font-medium">{language.name}</span>
+                </button>
               ))}
             </div>
           </li>

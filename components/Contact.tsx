@@ -1,11 +1,16 @@
 'use client'
 
+import { useTranslations } from '@/hooks/useTranslations'
+
 export default function Contact() {
+  const { t } = useTranslations()
+
   return (
     <section id="contact">
       <div className="container-fluid">
         <div className="section-header">
-          <h3>Contact Us</h3>
+          <h3>{t('contact.title')}</h3>
+          <p>{t('contact.subtitle')}</p>
         </div>
 
         <div className="row justify-content-center wow fadeInUp">
@@ -13,7 +18,7 @@ export default function Contact() {
             <div className="row">
               <div className="col-md-4 info">
                 <i className="ion-ios-location-outline"></i>
-                <p>Dhaka, Bangladesh<br />Casablanca, Morocco</p>
+                <p>{t('contact.address')}<br />Dhaka, Bangladesh<br />Casablanca, Morocco</p>
               </div>
               <div className="col-md-4 info">
                 <i className="ion-ios-telephone-outline"></i>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { TranslationProvider } from '@/hooks/useTranslations'
 import Header from '@/components/Header'
 import Intro from '@/components/Intro'
 import About from '@/components/About'
@@ -22,7 +23,7 @@ export default function Home() {
   }, [])
 
   return (
-    <>
+    <TranslationProvider>
       <Header />
       <Intro />
       <main id="main">
@@ -37,6 +38,6 @@ export default function Home() {
       </main>
       <Footer />
       <BackToTop />
-    </>
+    </TranslationProvider>
   )
 } 

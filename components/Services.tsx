@@ -1,48 +1,52 @@
 'use client'
 
+import { useTranslations } from '@/hooks/useTranslations'
+
 export default function Services() {
+  const { t } = useTranslations()
+
   const services = [
     {
       icon: 'ion-ios-paper-outline',
       color: '#41cf2e',
       gradient: 'from-green-400 to-green-600',
-      title: 'Website Development',
-      description: 'Custom, responsive websites built with modern technologies to enhance your digital presence and drive business growth.'
+      titleKey: 'services.websiteDevelopment.title',
+      descriptionKey: 'services.websiteDevelopment.description'
     },
     {
       icon: 'ion-ios-briefcase-outline',
       color: '#4680ff',
       gradient: 'from-blue-400 to-blue-600',
-      title: 'Software Development',
-      description: 'End-to-end software solutions tailored to your business requirements, from web applications to enterprise systems.'
+      titleKey: 'services.softwareDevelopment.title',
+      descriptionKey: 'services.softwareDevelopment.description'
     },
     {
       icon: 'ion-ios-cog-outline',
       color: '#ff689b',
       gradient: 'from-pink-400 to-pink-600',
-      title: 'Custom ERP Solutions',
-      description: 'Integrated ERP systems designed to streamline operations, improve efficiency, and provide real-time business insights.'
+      titleKey: 'services.erpSolutions.title',
+      descriptionKey: 'services.erpSolutions.description'
     },
     {
       icon: 'ion-ios-speedometer-outline',
       color: '#3fcdc7',
       gradient: 'from-teal-400 to-teal-600',
-      title: 'CRM Solutions',
-      description: 'Comprehensive customer relationship management systems to optimize sales processes and enhance customer engagement.'
+      titleKey: 'services.crmSolutions.title',
+      descriptionKey: 'services.crmSolutions.description'
     },
     {
       icon: 'ion-ios-bookmarks-outline',
       color: '#e9bf06',
       gradient: 'from-yellow-400 to-yellow-600',
-      title: 'AI Integration',
-      description: 'Intelligent automation solutions including chatbots, data analytics, and AI-powered business process optimization.'
+      titleKey: 'services.aiIntegration.title',
+      descriptionKey: 'services.aiIntegration.description'
     },
     {
       icon: 'ion-ios-cloud-outline',
       color: '#d6ff22',
       gradient: 'from-lime-400 to-lime-600',
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure solutions with AWS expertise, ensuring security, performance, and cost optimization.'
+      titleKey: 'services.cloudServices.title',
+      descriptionKey: 'services.cloudServices.description'
     }
   ]
 
@@ -50,9 +54,9 @@ export default function Services() {
     <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <header className="text-center mb-16">
-          <h3 className="text-4xl font-bold text-gray-800 mb-4">Our Services</h3>
+          <h3 className="text-4xl font-bold text-gray-800 mb-4">{t('services.title')}</h3>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We offer a comprehensive range of technology solutions to help your business thrive in today's competitive landscape.
+            {t('services.subtitle')}
           </p>
         </header>
 
@@ -74,14 +78,13 @@ export default function Services() {
                 
                 {/* Title */}
                 <h4 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-gray-900 transition-colors duration-300">
-                  {service.title}
+                  {t(service.titleKey)}
                 </h4>
                 
                 {/* Description */}
                 <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                  {service.description}
+                  {t(service.descriptionKey)}
                 </p>
-                
               </div>
               
               {/* Bottom accent line */}
@@ -93,12 +96,12 @@ export default function Services() {
         {/* Call to action */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h4 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h4>
+            <h4 className="text-2xl font-bold mb-4">{t('services.cta.title')}</h4>
             <p className="text-lg mb-6 opacity-90">
-              Let's discuss how our services can help you achieve your goals
+              {t('services.cta.subtitle')}
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 transform hover:scale-105">
-              Get Started Today
+              {t('services.cta.button')}
             </button>
           </div>
         </div>

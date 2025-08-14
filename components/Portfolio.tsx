@@ -1,8 +1,11 @@
 'use client'
 
 import Image from 'next/image'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function Portfolio() {
+  const { t } = useTranslations()
+
   const portfolioItems = [
     {
       image: '/allfiles/img/portfolio/bpc/dashboard.png',
@@ -50,7 +53,8 @@ export default function Portfolio() {
     <section id="portfolio" className="clearfix">
       <div className="container">
         <header className="section-header">
-          <h3 className="section-title">Our Portfolio</h3>
+          <h3 className="section-title">{t('portfolio.title')}</h3>
+          <p>{t('portfolio.subtitle')}</p>
         </header>
 
         <div className="row">
