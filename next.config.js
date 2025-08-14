@@ -4,7 +4,7 @@ const { i18n } = require('./next-i18next.config')
 const nextConfig = {
   i18n,
   images: {
-    domains: ['localhost', 'flagcdn.com'],
+    domains: ['localhost', 'flagcdn.com', 'dummyimage.com', 'upload.wikimedia.org'],
     unoptimized: true,
   },
 }

@@ -31,9 +31,9 @@ export default function Home() {
         <Services />
         <WhyUs />
         <Portfolio />
-        <Testimonials />
         <Team />
         <Clients />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

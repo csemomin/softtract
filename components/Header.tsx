@@ -10,6 +10,7 @@ export default function Header() {
   const [isMobileNavActive, setIsMobileNavActive] = useState(false)
   const [isClient, setIsClient] = useState(false)
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('intro')
 
   const languages = [
     { name: 'English', code: 'en', flag: '🇺🇸' },
@@ -48,6 +49,21 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100)
+      
+      // Update active section based on scroll position
+      const sections = ['intro', 'about', 'services', 'portfolio', 'contact']
+      const headerHeight = document.getElementById('header')?.offsetHeight || 0
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i])
+        if (section) {
+          const rect = section.getBoundingClientRect()
+          if (rect.top <= headerHeight + 100) {
+            setActiveSection(sections[i])
+            break
+          }
+        }
+      }
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -79,6 +95,9 @@ export default function Header() {
         top: element.offsetTop - topSpace,
         behavior: 'smooth'
       })
+      
+      // Update active section immediately
+      setActiveSection(sectionId)
     }
     
     // Close mobile nav if open
@@ -106,6 +125,14 @@ export default function Header() {
 
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0]
 
+  const navItems = [
+    { id: 'intro', label: t('navigation.home') },
+    { id: 'about', label: t('navigation.about') },
+    { id: 'services', label: t('navigation.services') },
+    { id: 'portfolio', label: t('navigation.portfolio') },
+    { id: 'contact', label: t('navigation.contact') }
+  ]
+
   return (
     <header id="header" className={`fixed-top ${isScrolled ? 'header-scrolled' : ''}`}>
       <div className="container">
@@ -121,26 +148,22 @@ export default function Header() {
 
         <nav className="main-nav float-right d-none d-lg-block">
           <ul>
-            <li className="active">
-              <button onClick={() => scrollToSection('intro')}>{t('navigation.home')}</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('about')}>{t('navigation.about')}</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('services')}>{t('navigation.services')}</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('portfolio')}>{t('navigation.portfolio')}</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('contact')}>{t('navigation.contact')}</button>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.id} className={activeSection === item.id ? 'active' : ''}>
+                <button 
+                  onClick={() => scrollToSection(item.id)}
+                  style={{ border: 'none', outline: 'none' }}
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
             <li className="language-selector">
               <div className="relative">
                 <button 
                   onClick={toggleLanguageDropdown}
                   className="language-btn flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                  style={{ border: 'none', outline: 'none' }}
                 >
                   <FlagIcon countryCode={currentLanguage.code} />
                   <span className="text-sm font-medium text-gray-700">
@@ -165,6 +188,7 @@ export default function Header() {
                         className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-gray-50 transition-colors duration-200 ${
                           currentLanguage.code === language.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
                         }`}
+                        style={{ border: 'none', outline: 'none' }}
                       >
                         <FlagIcon countryCode={language.code} />
                         <span className="text-sm font-medium">{language.name}</span>
@@ -179,7 +203,7 @@ export default function Header() {
 
         {/* Mobile Navigation Toggle */}
         <div className="mobile-nav-toggle d-lg-none">
-          <button onClick={toggleMobileNav}>
+          <button onClick={toggleMobileNav} style={{ border: 'none', outline: 'none' }}>
             <i className={`fa ${isMobileNavActive ? 'fa-times' : 'fa-bars'}`}></i>
           </button>
         </div>
@@ -193,21 +217,16 @@ export default function Header() {
       {/* Mobile Navigation Menu */}
       <nav className={`mobile-nav ${isClient && isMobileNavActive ? 'active' : ''}`}>
         <ul>
-          <li className="active">
-            <button onClick={() => scrollToSection('intro')}>{t('navigation.home')}</button>
-          </li>
-          <li>
-            <button onClick={() => scrollToSection('about')}>{t('navigation.about')}</button>
-          </li>
-          <li>
-            <button onClick={() => scrollToSection('services')}>{t('navigation.services')}</button>
-          </li>
-          <li>
-            <button onClick={() => scrollToSection('portfolio')}>{t('navigation.portfolio')}</button>
-          </li>
-          <li>
-            <button onClick={() => scrollToSection('contact')}>{t('navigation.contact')}</button>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.id} className={activeSection === item.id ? 'active' : ''}>
+              <button 
+                onClick={() => scrollToSection(item.id)}
+                style={{ border: 'none', outline: 'none' }}
+              >
+                {item.label}
+              </button>
+            </li>
+          ))}
           <li className="mobile-language-section">
             <div className="mobile-language-header">
               <span className="text-sm font-medium text-gray-600">Language</span>
@@ -220,6 +239,7 @@ export default function Header() {
                   className={`mobile-language-option flex items-center space-x-3 w-full px-4 py-3 text-left ${
                     currentLanguage.code === language.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
                   }`}
+                  style={{ border: 'none', outline: 'none' }}
                 >
                   <FlagIcon countryCode={language.code} />
                   <span className="text-sm font-medium">{language.name}</span>
