@@ -607,12 +607,12 @@ h6 {
 
 #services .icon {
   position: absolute;
-  left: -10px;
+  left: 10px;
   top: calc(50% - 32px);
 }
 
 #services .icon i {
-  font-size: 64px;
+  font-size: 50px;
   line-height: 1;
   transition: 0.5s;
 }

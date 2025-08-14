@@ -7,6 +7,38 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileNavActive, setIsMobileNavActive] = useState(false)
   const [isClient, setIsClient] = useState(false)
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
+  const [currentLanguage, setCurrentLanguage] = useState('English')
+
+  const languages = [
+    { name: 'English', code: 'en', flag: '🇺🇸' },
+    { name: 'Français', code: 'fr', flag: '🇫🇷' },
+    { name: 'Español', code: 'es', flag: '🇪🇸' },
+    { name: 'Deutsch', code: 'de', flag: '🇩🇪' },
+    { name: 'Português', code: 'pt', flag: '🇵🇹' },
+    { name: 'Italiano', code: 'it', flag: '🇮🇹' }
+  ]
+
+  // Flag component using flag images
+  const FlagIcon = ({ countryCode }: { countryCode: string }) => {
+    const flagUrls: { [key: string]: string } = {
+      en: 'https://flagcdn.com/w20/us.png',
+      fr: 'https://flagcdn.com/w20/fr.png', 
+      es: 'https://flagcdn.com/w20/es.png',
+      de: 'https://flagcdn.com/w20/de.png',
+      pt: 'https://flagcdn.com/w20/pt.png',
+      it: 'https://flagcdn.com/w20/it.png'
+    }
+    
+    return (
+      <img 
+        src={flagUrls[countryCode] || flagUrls.en}
+        alt={`${countryCode} flag`}
+        className="w-5 h-4 object-cover rounded-sm"
+        style={{ minWidth: '20px', minHeight: '16px' }}
+      />
+    )
+  }
 
   useEffect(() => {
     setIsClient(true)
@@ -62,6 +94,17 @@ export default function Header() {
     setIsMobileNavActive(false)
   }
 
+  const toggleLanguageDropdown = () => {
+    setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
+  }
+
+  const selectLanguage = (language: { name: string, code: string, flag: string }) => {
+    setCurrentLanguage(language.name)
+    setIsLanguageDropdownOpen(false)
+    // Here you can add logic to change the actual language
+    console.log(`Language changed to: ${language.name} (${language.code})`)
+  }
+
   return (
     <header id="header" className={`fixed-top ${isScrolled ? 'header-scrolled' : ''}`}>
       <div className="container">
@@ -91,6 +134,44 @@ export default function Header() {
             </li>
             <li>
               <button onClick={() => scrollToSection('contact')}>Contact Us</button>
+            </li>
+            <li className="language-selector">
+              <div className="relative">
+                <button 
+                  onClick={toggleLanguageDropdown}
+                  className="language-btn flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                >
+                  <FlagIcon countryCode={languages.find(lang => lang.name === currentLanguage)?.code || 'en'} />
+                  <span className="text-sm font-medium text-gray-700">
+                    {currentLanguage}
+                  </span>
+                  <svg 
+                    className={`w-4 h-4 transition-transform duration-200 ${isLanguageDropdownOpen ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {isLanguageDropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                    {languages.map((language) => (
+                                             <button
+                         key={language.code}
+                         onClick={() => selectLanguage(language)}
+                         className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-gray-50 transition-colors duration-200 ${
+                           currentLanguage === language.name ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                         }`}
+                       >
+                         <FlagIcon countryCode={language.code} />
+                         <span className="text-sm font-medium">{language.name}</span>
+                       </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </li>
           </ul>
         </nav>
@@ -125,6 +206,25 @@ export default function Header() {
           </li>
           <li>
             <button onClick={() => scrollToSection('contact')}>Contact Us</button>
+          </li>
+          <li className="mobile-language-section">
+            <div className="mobile-language-header">
+              <span className="text-sm font-medium text-gray-600">Language</span>
+            </div>
+            <div className="mobile-language-options">
+              {languages.map((language) => (
+                                 <button
+                   key={language.code}
+                   onClick={() => selectLanguage(language)}
+                   className={`mobile-language-option flex items-center space-x-3 w-full px-4 py-3 text-left ${
+                     currentLanguage === language.name ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                   }`}
+                 >
+                   <FlagIcon countryCode={language.code} />
+                   <span className="text-sm font-medium">{language.name}</span>
+                 </button>
+              ))}
+            </div>
           </li>
         </ul>
       </nav>

@@ -7,7 +7,7 @@ export default function Portfolio() {
     {
       image: '/allfiles/img/portfolio/bpc/dashboard.png',
       title: 'BPC',
-      description: '',
+      description: 'BPC-AI: AI-Powered Automation Platform Built with Laravel',
       preview: '/allfiles/img/portfolio/bpc/dashboard.png',
       link: 'https://app.bpc-ai.com',
       category: 'app'
@@ -82,7 +82,7 @@ export default function Portfolio() {
                         {item.link && (
                           <a 
                             href={item.link} 
-                            target="_blank" 
+                            target="_blank"  
                             className="link-details" 
                             title="More Details"
                           >

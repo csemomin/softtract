@@ -1,8 +1,11 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 export default function Testimonials() {
+  const carouselRef = useRef<HTMLDivElement>(null)
+
   const testimonials = [
     {
       image: '/allfiles/img/Babacar.jpg',
@@ -30,6 +33,53 @@ export default function Testimonials() {
     }
   ]
 
+  useEffect(() => {
+    // Initialize Owl Carousel after component mounts
+    const initCarousel = () => {
+      if (typeof window !== 'undefined' && window.jQuery && carouselRef.current) {
+        const $ = window.jQuery
+        const $carousel = $(carouselRef.current)
+        
+        if ($carousel.length && typeof $carousel.owlCarousel === 'function') {
+          $carousel.owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 20,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn'
+          })
+        }
+      }
+    }
+
+    // Wait for jQuery and Owl Carousel to be available
+    const checkAndInit = () => {
+      if (typeof window !== 'undefined' && window.jQuery && window.jQuery.fn && window.jQuery.fn.owlCarousel) {
+        initCarousel()
+      } else {
+        setTimeout(checkAndInit, 100)
+      }
+    }
+
+    checkAndInit()
+
+    // Cleanup function
+    return () => {
+      if (typeof window !== 'undefined' && window.jQuery && carouselRef.current) {
+        const $ = window.jQuery
+        const $carousel = $(carouselRef.current)
+        if ($carousel.length && $carousel.data('owl.carousel')) {
+          $carousel.trigger('destroy.owl.carousel')
+        }
+      }
+    }
+  }, [])
+
   return (
     <section id="testimonials" className="section-bg">
       <div className="container">
@@ -39,7 +89,7 @@ export default function Testimonials() {
 
         <div className="row justify-content-center">
           <div className="col-lg-8">
-            <div className="owl-carousel testimonials-carousel wow fadeInUp">
+            <div ref={carouselRef} className="owl-carousel testimonials-carousel wow fadeInUp">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="testimonial-item">
                   <Image 
