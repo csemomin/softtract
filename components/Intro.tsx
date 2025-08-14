@@ -32,8 +32,8 @@ export default function Intro() {
         </div>
 
         <div className="intro-info">
-          <h2>Powering Ideas into Digital Reality</h2>
-          <p>From concept to deployment, Softtract delivers tailor-made software solutions for businesses of all sizes. We specialize in web, mobile, cloud, and enterprise systems that are fast, secure, and scalable.</p>
+          <h2>{t('intro.title')}</h2>
+          <p>{t('intro.description')}</p>
           <div className="intro-buttons">
             <button 
               className="btn-schedule"
@@ -45,13 +45,13 @@ export default function Intro() {
                 <line x1="8" y1="2" x2="8" y2="6"/>
                 <line x1="3" y1="10" x2="21" y2="10"/>
               </svg>
-              <span>Schedule a Call</span>
+              <span>{t('intro.cta')}</span>
             </button>
             <button 
               className="btn-services"
               onClick={scrollToServices}
             >
-              <span>Our Services</span>
+              <span>{t('services.title')}</span>
             </button>
           </div>
         </div>

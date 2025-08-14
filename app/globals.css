@@ -100,6 +100,204 @@
   padding: 0 !important;
 }
 
+/* About Page Styles */
+.about-page {
+  padding-top: 80px;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-section .lead {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.about-content {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.about-text h2 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+.about-image {
+  text-align: center;
+}
+
+.mission-vision {
+  padding: 80px 0;
+  background: white;
+}
+
+.mission-card,
+.vision-card {
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+  transform: translateY(-5px);
+}
+
+.mission-card h3,
+.vision-card h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.mission-card p,
+.vision-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.why-choose-us {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.why-choose-us h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.why-choose-us .lead {
+  color: #666;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h4 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.stats-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.stat-card h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.stat-card p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.cta-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.cta-section p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+  }
+  
+  .mission-card,
+  .vision-card {
+    margin-bottom: 30px;
+  }
+  
+  .feature-card {
+    margin-bottom: 30px;
+  }
+  
+  .stat-card h3 {
+    font-size: 2.5rem;
+  }
+}
+
 /* Main Navigation Button Styling */
 .main-nav button {
   background: none !important;

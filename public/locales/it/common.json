@@ -1,19 +1,19 @@
 {
   "navigation": {
     "home": "Home",
-    "about": "Chi Siamo",
+    "about": "Chi",
     "services": "Servizi",
     "portfolio": "Portfolio",
     "contact": "Contatti"
   },
   "intro": {
-    "title": "Benvenuto in Softtract",
+    "title": "Trasformare le Idee in Realtà Digitale",
     "subtitle": "Il Tuo Partner Tecnologico per il Successo Digitale",
-    "description": "Ci specializziamo nella creazione di soluzioni software innovative che guidano la crescita aziendale e la trasformazione digitale.",
-    "cta": "Inizia Ora"
+    "description": "Dal concetto al deployment, Softtract fornisce soluzioni software su misura per aziende di tutte le dimensioni. Ci specializziamo in sistemi web, mobili, cloud e aziendali che sono veloci, sicuri e scalabili.",
+    "cta": "Programma una Chiamata"
   },
   "about": {
-    "title": "Chi Siamo",
+    "title": "Chi",
     "subtitle": "Potenziare le Aziende Attraverso la Tecnologia",
     "description": "Softtract è un'azienda tecnologica leader dedicata ad aiutare le aziende a prosperare nell'era digitale. Con anni di esperienza e un team appassionato di esperti, forniamo soluzioni all'avanguardia che trasformano le idee in realtà.",
     "mission": "La Nostra Missione",
