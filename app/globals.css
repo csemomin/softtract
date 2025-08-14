@@ -1,6 +1,85 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Intro Section Styles */
+.intro-info p {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.intro-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-schedule,
+.btn-services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  min-width: 180px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.btn-schedule {
+  border: none;
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.btn-schedule:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+}
+
+.btn-schedule svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.btn-services {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+.btn-services:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .intro-img {
+    display: none;
+  }
+  
+  .intro-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-schedule,
+  .btn-services {
+    width: 100%;
+    max-width: 280px;
+    min-width: auto;
+  }
+}
 
 /* Import the original CSS file */
 @import url('/allfiles/css/style.css');
